@@ -12,7 +12,7 @@ import { collector } from './data/collector.js'
 import { ConnectionType, Edge, FactoryGraph, Node, NodeType } from './factory_graph.js'
 
 /**
- * The type of create_factory
+ * The type of factory
  * @enum {number}
  * @readonly
  */
@@ -31,7 +31,7 @@ class Factory {
    */
   outputs = []
   /**
-   * The model used for this create_factory
+   * The model used for this factory
    * @type {FactoryModel|number}
    */
   model = FactoryModel.SINGLE_PRODUCTION
@@ -71,7 +71,7 @@ class Factory {
   }
 
   /**
-   * Prepare the create_factory by creating all nodes and connections
+   * Prepare the factory by creating all nodes and connections
    *
    * Can be instruction expensive
    */
@@ -191,7 +191,7 @@ class Factory {
   }
 }
 
-function create_factory(api_result) {
+function factory(api_result) {
   let result = Object.entries(api_result.result)
 
   console.log(result)
@@ -249,4 +249,4 @@ function parse_product(k, v, index) {
   }
 }
 
-export { create_factory, Factory, FactoryModel }
+export { factory, Factory, FactoryModel }

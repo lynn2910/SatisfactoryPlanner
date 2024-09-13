@@ -1,4 +1,4 @@
-import { create_factory } from './create_factory.js'
+import { factory } from './factory.js'
 import { collector } from './data/collector.js'
 import { draw_factory } from './factory_drawer.js'
 
@@ -30,16 +30,16 @@ export function preprocessor() {
     }
   }
 
-  // proc.create_factory = null
+  // proc.factory = null
   proc.find_raw_inputs(api_result)
-  proc.factories = create_factory(api_result)
+  proc.factories = factory(api_result)
 
   proc.draw_canvas()
 }
 
 export class Processor {
   /**
-   * The create_factory
+   * The factory
    * @type {Factory[]}
    */
   factories = []

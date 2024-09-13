@@ -1,8 +1,8 @@
-import { Factory, FactoryModel } from './create_factory.js'
+import { Factory, FactoryModel } from './factory.js'
 import { Processor } from './builder.js'
 
 /**
- * Draw create_factory on the canvas
+ * Draw factory on the canvas
  * @param {Processor} proc
  * @param {Factory} factory
  */
