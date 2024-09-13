@@ -249,4 +249,4 @@ function parse_product(k, v, index) {
   }
 }
 
-export { create_factory, Factory }
+export { create_factory, Factory, FactoryModel }

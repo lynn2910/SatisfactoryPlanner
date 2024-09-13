@@ -1,5 +1,6 @@
 import { create_factory } from './create_factory.js'
 import { collector } from './data/collector.js'
+import { draw_factory } from './factory_drawer.js'
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded -> starting the processor')
@@ -16,10 +17,8 @@ export function preprocessor() {
   const ctx = canvas.getContext('2d')
 
   let proc = new Processor(canvas, ctx)
-  console.log(ctx)
 
   proc.init_listeners()
-  proc.draw_canvas()
 
   let api_result = {
     'code': 200,
@@ -35,6 +34,7 @@ export function preprocessor() {
   proc.find_raw_inputs(api_result)
   proc.factories = create_factory(api_result)
 
+  proc.draw_canvas()
 }
 
 export class Processor {
@@ -102,11 +102,14 @@ export class Processor {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
     this.ctx.fillStyle = '#000'
-    this.ctx.fillRect(
-      10 * this.ratio[0],
-      10 * this.ratio[1],
-      100 * this.ratio[0],
-      100 * this.ratio[1]
-    )
+    // this.ctx.fillRect(
+    //   10 * this.ratio[0],
+    //   10 * this.ratio[1],
+    //   100 * this.ratio[0],
+    //   100 * this.ratio[1]
+    // )
+
+    let fact = this.factories[0]
+    draw_factory(this, fact)
   }
 }
