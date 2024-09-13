@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "result": {
+    "Desc_OreIron_C#Mine": "10",
+    "special__power#Byproduct": "1.333333333333",
+    "Recipe_IngotIron_C@100#Desc_SmelterMk1_C": "0.3333333333333",
+    "Desc_IronIngot_C#Product": "10"
+  }
+}

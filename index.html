@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satisfactory Planner</title>
+<head>
+  <title>Satisfactory planner</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+      body {
+          margin: 0;
+          padding: 0;
+          width: 100vw;
+          height: 100vh;
+      }
 
-  </head>
-  <body>
-    <div id="app" class="w-screen h-screen bg-slate-300 text-black dark:bg-gray-900 dark:text-white"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+      canvas {
+          width: 100vw;
+          height: 100vh;
+      }
+  </style>
+</head>
+<body>
+<canvas id="factory_drawer" width="1920" height="1080"></canvas>
+</body>
+<script type="module" src="src/builder.js"></script>
 </html>
